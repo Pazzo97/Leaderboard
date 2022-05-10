@@ -2,22 +2,20 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  // mode: 'development',
+  mode: 'development',
   entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js',
+  },
   devServer: {
     static: './dist',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Output Management',
       template: './src/index.html',
     }),
   ],
-  output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true,
-  },
   module: {
     rules: [
       {
@@ -27,14 +25,6 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
-      },
-      {
-        test: /\.(png|svg|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-          },
-        ],
       },
     ],
   },
