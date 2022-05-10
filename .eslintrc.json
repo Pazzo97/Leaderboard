@@ -22,15 +22,11 @@
     "dist/",
     "build/"
   ],
-  "settings":{
-  "import/resolver":{
-    "webpack":{
-      "config":{
-        "resolve":{
-          "extensions":[".js", ".jsx"]
-          }
-          }
-          }
-        }
-      } 
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
 }
