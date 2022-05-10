@@ -21,12 +21,5 @@
   "ignorePatterns": [
     "dist/",
     "build/"
-  ],
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    }
-  }
+  ]
 }
